@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct PopularMovieResponse: Decodable {
+public struct PopularNewResponse: Decodable {
     public let results: [New]
     private enum RootCodingKeys : String, CodingKey{
         case results
