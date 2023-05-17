@@ -39,10 +39,10 @@ public struct NewResult: Decodable{
     }
 
 public struct Multimedia:Decodable {
-    public let url : String?
+    public let urll : String?
     
     enum CodingKeys: String, CodingKey{
-        case url = "url"
+        case urll = "url"
     }
 }
 

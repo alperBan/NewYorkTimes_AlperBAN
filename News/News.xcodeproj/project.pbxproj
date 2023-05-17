@@ -20,6 +20,13 @@
 		241C3DEC2A13775800E1E631 /* CollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C3DEB2A13775800E1E631 /* CollectionView+Extension.swift */; };
 		241C3DEE2A1378F700E1E631 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C3DED2A1378F700E1E631 /* UICollectionViewCell+Extension.swift */; };
 		241C3DF12A137A0800E1E631 /* NewsAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 241C3DF02A137A0800E1E631 /* NewsAPI */; };
+		241C3DF42A1384D700E1E631 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C3DF32A1384D700E1E631 /* LoadingView.swift */; };
+		241C3DF72A13879300E1E631 /* LoadingShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C3DF62A13879300E1E631 /* LoadingShowable.swift */; };
+		241C3DFB2A138DC500E1E631 /* NewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C3DF92A138DC500E1E631 /* NewCell.swift */; };
+		241C3DFC2A138DC500E1E631 /* NewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241C3DFA2A138DC500E1E631 /* NewCell.xib */; };
+		241C3DFF2A13933A00E1E631 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 241C3DFE2A13933A00E1E631 /* SDWebImage */; };
+		24B57CA52A1412F500610758 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B57CA42A1412F500610758 /* DetailsViewController.swift */; };
+		24B57CA72A142DE900610758 /* CornerRadius extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B57CA62A142DE900610758 /* CornerRadius extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,12 @@
 		241C3DE92A12C93C00E1E631 /* NewsAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NewsAPI; path = ../NewsAPI; sourceTree = "<group>"; };
 		241C3DEB2A13775800E1E631 /* CollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+Extension.swift"; sourceTree = "<group>"; };
 		241C3DED2A1378F700E1E631 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		241C3DF32A1384D700E1E631 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		241C3DF62A13879300E1E631 /* LoadingShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingShowable.swift; sourceTree = "<group>"; };
+		241C3DF92A138DC500E1E631 /* NewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCell.swift; sourceTree = "<group>"; };
+		241C3DFA2A138DC500E1E631 /* NewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCell.xib; sourceTree = "<group>"; };
+		24B57CA42A1412F500610758 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		24B57CA62A142DE900610758 /* CornerRadius extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CornerRadius extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241C3DFF2A13933A00E1E631 /* SDWebImage in Frameworks */,
 				241C3DF12A137A0800E1E631 /* NewsAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,10 +124,14 @@
 		241C3DB52A12B98400E1E631 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				241C3DF82A138D8E00E1E631 /* Cells */,
+				241C3DF52A13878200E1E631 /* Utilies */,
+				241C3DF22A1384BC00E1E631 /* View */,
 				241C3DEA2A13773700E1E631 /* Extensions */,
 				241C3DB62A12B98400E1E631 /* AppDelegate.swift */,
 				241C3DB82A12B98400E1E631 /* SceneDelegate.swift */,
 				241C3DBA2A12B98400E1E631 /* ViewController.swift */,
+				24B57CA42A1412F500610758 /* DetailsViewController.swift */,
 				241C3DBC2A12B98400E1E631 /* Main.storyboard */,
 				241C3DC22A12B98500E1E631 /* Assets.xcassets */,
 				241C3DC42A12B98500E1E631 /* LaunchScreen.storyboard */,
@@ -145,6 +163,7 @@
 			children = (
 				241C3DEB2A13775800E1E631 /* CollectionView+Extension.swift */,
 				241C3DED2A1378F700E1E631 /* UICollectionViewCell+Extension.swift */,
+				24B57CA62A142DE900610758 /* CornerRadius extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +173,31 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		241C3DF22A1384BC00E1E631 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				241C3DF32A1384D700E1E631 /* LoadingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		241C3DF52A13878200E1E631 /* Utilies */ = {
+			isa = PBXGroup;
+			children = (
+				241C3DF62A13879300E1E631 /* LoadingShowable.swift */,
+			);
+			path = Utilies;
+			sourceTree = "<group>";
+		};
+		241C3DF82A138D8E00E1E631 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				241C3DF92A138DC500E1E631 /* NewCell.swift */,
+				241C3DFA2A138DC500E1E631 /* NewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +218,7 @@
 			name = News;
 			packageProductDependencies = (
 				241C3DF02A137A0800E1E631 /* NewsAPI */,
+				241C3DFE2A13933A00E1E631 /* SDWebImage */,
 			);
 			productName = News;
 			productReference = 241C3DB32A12B98400E1E631 /* News.app */;
@@ -247,6 +292,9 @@
 				Base,
 			);
 			mainGroup = 241C3DAA2A12B98400E1E631;
+			packageReferences = (
+				241C3DFD2A13933A00E1E631 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 241C3DB42A12B98400E1E631 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,6 +313,7 @@
 			files = (
 				241C3DC62A12B98500E1E631 /* LaunchScreen.storyboard in Resources */,
 				241C3DC32A12B98500E1E631 /* Assets.xcassets in Resources */,
+				241C3DFC2A138DC500E1E631 /* NewCell.xib in Resources */,
 				241C3DBE2A12B98400E1E631 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,9 +342,14 @@
 				241C3DBB2A12B98400E1E631 /* ViewController.swift in Sources */,
 				241C3DB72A12B98400E1E631 /* AppDelegate.swift in Sources */,
 				241C3DEE2A1378F700E1E631 /* UICollectionViewCell+Extension.swift in Sources */,
+				24B57CA72A142DE900610758 /* CornerRadius extension.swift in Sources */,
+				241C3DF72A13879300E1E631 /* LoadingShowable.swift in Sources */,
 				241C3DC12A12B98400E1E631 /* News.xcdatamodeld in Sources */,
 				241C3DEC2A13775800E1E631 /* CollectionView+Extension.swift in Sources */,
+				241C3DF42A1384D700E1E631 /* LoadingView.swift in Sources */,
+				241C3DFB2A138DC500E1E631 /* NewCell.swift in Sources */,
 				241C3DB92A12B98400E1E631 /* SceneDelegate.swift in Sources */,
+				24B57CA52A1412F500610758 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +534,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,6 +563,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -638,10 +694,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		241C3DFD2A13933A00E1E631 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		241C3DF02A137A0800E1E631 /* NewsAPI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NewsAPI;
+		};
+		241C3DFE2A13933A00E1E631 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 241C3DFD2A13933A00E1E631 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 
