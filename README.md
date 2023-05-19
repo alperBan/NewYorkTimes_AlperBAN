@@ -59,9 +59,7 @@ Bu projeye katkıda bulunmak için aşağıdaki adımları izleyebilirsiniz:
 3. Yeni bir dal oluşturun:
    ```shell
    git checkout -b yeni-özellik
-4. Yaptığınız değişiklikleri kaydedin:
-   ```shell
-   git commit -am 'Yeni özell
+
 
 
 
