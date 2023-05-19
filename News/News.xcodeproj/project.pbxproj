@@ -130,8 +130,6 @@
 				241C3DEA2A13773700E1E631 /* Extensions */,
 				241C3DB62A12B98400E1E631 /* AppDelegate.swift */,
 				241C3DB82A12B98400E1E631 /* SceneDelegate.swift */,
-				241C3DBA2A12B98400E1E631 /* ViewController.swift */,
-				24B57CA42A1412F500610758 /* DetailsViewController.swift */,
 				241C3DBC2A12B98400E1E631 /* Main.storyboard */,
 				241C3DC22A12B98500E1E631 /* Assets.xcassets */,
 				241C3DC42A12B98500E1E631 /* LaunchScreen.storyboard */,
@@ -178,6 +176,8 @@
 		241C3DF22A1384BC00E1E631 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				24B57CA42A1412F500610758 /* DetailsViewController.swift */,
+				241C3DBA2A12B98400E1E631 /* ViewController.swift */,
 				241C3DF32A1384D700E1E631 /* LoadingView.swift */,
 			);
 			path = View;

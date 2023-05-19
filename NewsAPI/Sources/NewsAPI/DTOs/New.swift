@@ -9,15 +9,10 @@ import Foundation
 
 public struct NewResult: Decodable{
         public let results: [New]?
-    
-     
-        
         enum CodingKeys: String, CodingKey {
             case results
         }
     }
-
-
     public struct New: Decodable {
         public let section: String?
         public let subsection: String?

@@ -11,12 +11,8 @@ import Alamofire
 public protocol PopularNewServiceProtocol {
     func fetchPopularNews(completion: @escaping (Result<[New], Error>) -> Void)
 }
-
-
 public class PopularNewService: PopularNewServiceProtocol {
     public init() {}
-    
-    
     public func fetchPopularNews(completion: @escaping (Result<[New], Error>) -> Void) {
         
         let urlString = "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=1BbfdRTHFXNCKtq06y2Dv5CCeGgMBRiH"

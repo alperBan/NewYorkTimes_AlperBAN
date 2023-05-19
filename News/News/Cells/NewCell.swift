@@ -12,25 +12,25 @@ class NewCell: UICollectionViewCell {
     @IBOutlet weak var newImage: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var author: UILabel!
-    var url:String?
-    var abstract:String?
-    let d = UserDefaults.standard
+    private var url: String = ""
+    private var abstract: String = ""
+     
     override func awakeFromNib() {
-        super.awakeFromNib()
-       
-        
-    }
-
- 
+         super.awakeFromNib()
+         let imageBorderWidth: CGFloat = 5
+         let imageBorderColor = UIColor.systemGray5.cgColor
+         newImage.layer.borderWidth = imageBorderWidth
+         newImage.layer.borderColor = imageBorderColor
+     }
+     
     func configure(new: New) {
-            title.text = new.title
-            author.text = new.byline
-            url = new.url
-            abstract = new.abstract
-            if let multimedia = new.multimedia.first, let urlString = multimedia.urll, let url = URL(string: urlString) {
-                newImage.sd_setImage(with: url)
-                
-            }
-        
-        }
-}
+         title.text = new.title
+         author.text = new.byline
+         url = new.url ?? ""
+         abstract = new.abstract ?? ""
+         
+         if let multimedia = new.multimedia.first, let urlString = multimedia.urll, let url = URL(string: urlString) {
+             newImage.sd_setImage(with: url)
+         }
+     }
+ }
